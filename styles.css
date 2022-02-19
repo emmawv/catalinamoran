@@ -19,11 +19,12 @@ h1, h2, h3 {
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  padding: 20px 40px;
+  padding: 0 40px;
   z-index: 99999;
 }
 
@@ -31,9 +32,17 @@ header {
   background-color: transparent;
 }
 
+.transparent .logo {
+  visibility: hidden;
+}
+
 .solid {
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.solid .logo {
+  visibility: visible;
 }
 
 nav ul {
@@ -47,14 +56,19 @@ ul li a {
   color: black;
 }
 
+.logo img {
+  width: 70px;
+  height: 70px;
+}
+
 .hero, .hero_maint {
   height: 600px;
   display: flex;
 }
 
 .hero div {
-  flex-basis: 50%;
   overflow: hidden;
+  min-width: 30%;
 }
 
 .hero .hero-content, .hero_maint .hero-content {
@@ -72,11 +86,19 @@ ul li a {
   margin: 0 auto;
 }
 
+.hero-content h1 {
+  font-size: 3em;
+}
+
+.hero-content p {
+  font-size: 1.5em;
+}
+
 .hero .hero-img img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: top;
 }
 
 .gallery {
