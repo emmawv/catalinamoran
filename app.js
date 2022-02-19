@@ -28,3 +28,8 @@ window.addEventListener('scroll', (() => {
     header.classList.add('transparent')
   }
 }))
+
+const pageScroll = (section) => {
+  const element = document.getElementById(section)
+  element.scrollIntoView(true);
+}
