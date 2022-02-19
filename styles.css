@@ -52,10 +52,10 @@ ul li a {
   display: flex;
 }
 
-.hero div {
+/* .hero div {
   flex-basis: 50%;
   overflow: hidden;
-}
+} */
 
 .hero .hero-content {
   height: 100%;
