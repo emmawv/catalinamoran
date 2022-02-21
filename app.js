@@ -19,7 +19,7 @@ checkHeroSize = () => {
     const heroImage = document.querySelector(".hero-img__mob");
     document.querySelector(
       ".hero"
-    ).style.marginTop = `${heroImage.offsetHeight}px`;
+    ).style.marginTop = `${heroImage.clientHeight - 2}px`;
   } else {
     document.querySelector(".hero").style.marginTop = 0;
   }
@@ -35,7 +35,7 @@ bodyLoaded = () => {
 
 checkHeader = () => {
   const header = document.querySelector('header')
-  
+
   if (window.innerWidth <= 768) {
     header.classList.remove("transparent");
     header.classList.add("solid");

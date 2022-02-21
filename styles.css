@@ -125,7 +125,6 @@ ul li a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 30px;
   font-family: "Libre Baskerville", serif;
 }
 
@@ -401,14 +400,13 @@ section {
   .hero-img__mob {
     display: block;
     /* padding-top: 80px; */
-    flex-basis: 70%;
     /* width: 70%;
     margin: 0 auto; */
     position: fixed;
     top: 0;
     right: 0;
-    height: min-content;
-    width: 100%;
+    left: 0;
+    height: auto;
     z-index: -9999999;
   }
 
@@ -418,6 +416,7 @@ section {
     object-fit: cover;
     object-position: top;
     margin-top: 75px;
+    margin-bottom: 0;
   }
 
   .hero-content p {
@@ -426,8 +425,11 @@ section {
 
   .hero-content {
     flex-shrink: 1;
-    gap: 15px;
     padding: 50px 0;
+  }
+
+  .hero-content p:not(:last-child) {
+    margin-bottom: 30px;
   }
 
   #gallery {
