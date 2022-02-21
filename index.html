@@ -20,7 +20,7 @@
         <div class="logo"><img src="./assets/logo.png" /></div>
         <nav>
           <ul>
-            <li onclick="pageScroll('about-me')">Sobre mi</li>
+            <li onclick="pageScroll('about-me')">Sobre mí</li>
             <li onclick="pageScroll('gallery')">Galería</li>
             <li onclick="pageScroll('cv')">CV</li>
             <li onclick="pageScroll('videos')">Vídeos</li>
@@ -42,7 +42,7 @@
             <p>
               Comencé mi trayectoria artística en el mundo de la danza, pero más
               tarde me trasladé a Madrid para estudiar Arte Dramático. Me gradué
-              en interpretación musical, y más tarde amplié mi formación en
+              en interpretación musical, y continué mi formación en
               Central de Cine y en la escuela de Grumelot & Nave73.
             </p>
             <p>
@@ -53,7 +53,21 @@
         </section>
 
         <section id="gallery">
+          <img
+              src="./assets/icons/arrow-before.svg"
+              alt="arrow before"
+              class="slider-arrow arrow-prev"
+              onclick="scrollGallery('left')"
+            />
+            <img
+              src="./assets/icons/arrow-next.svg"
+              alt="arrow next"
+              class="slider-arrow arrow-next"
+              onclick="scrollGallery('right')"
+            />
+
           <div><h2 class="section-title">Galería</h2></div>
+
           <div class="gallery">
             <div class="item-1" onclick="setImageLarge('item-1')">
               <img class="img-hover" src="./assets/gallery/gallery-1.jpg" />
@@ -83,54 +97,12 @@
               <img class="img-hover" src="./assets/gallery/gallery-9.jpg" />
             </div>
           </div>
-
-          <div class="gallery__mob">
-            <img
-              src="./assets/icons/arrow-before.svg"
-              alt="arrow before"
-              class="arrow-prev"
-              onclick="scrollGallery('left')"
-            />
-            <img
-              src="./assets/icons/arrow-next.svg"
-              alt="arrow next"
-              class="arrow-next"
-              onclick="scrollGallery('right')"
-            />
-            <div class="item-1__mob" onclick="setImageLarge('item-1__mob')">
-              <img src="./assets/gallery/gallery-1.jpg" />
-            </div>
-            <div class="item-2__mob" onclick="setImageLarge('item-2__mob')">
-              <img src="./assets/gallery/gallery-2.jpg" />
-            </div>
-            <div class="item-3__mob" onclick="setImageLarge('item-3__mob')">
-              <img src="./assets/gallery/gallery-3.jpg" />
-            </div>
-            <div class="item-4__mob" onclick="setImageLarge('item-4__mob')">
-              <img src="./assets/gallery/gallery-4.jpg" />
-            </div>
-            <div class="item-5__mob" onclick="setImageLarge('item-5__mob')">
-              <img src="./assets/gallery/gallery-5.jpg" />
-            </div>
-            <div class="item-6__mob" onclick="setImageLarge('item-6__mob')">
-              <img src="./assets/gallery/gallery-6.jpg" />
-            </div>
-            <div class="item-7__mob" onclick="setImageLarge('item-7__mob')">
-              <img src="./assets/gallery/gallery-7.jpg" />
-            </div>
-            <div class="item-8__mob" onclick="setImageLarge('item-8__mob')">
-              <img src="./assets/gallery/gallery-8.jpg" />
-            </div>
-            <div class="item-9__mob" onclick="setImageLarge('item-9__mob')">
-              <img src="./assets/gallery/gallery-9.jpg" />
-            </div>
-          </div>
         </section>
 
         <section id="cv">
           <div><h2 class="section-title">CV</h2></div>
           <div class="contact-content">
-            <p>Puedes ver y decargar mi CV <a href="https://www.dropbox.com/s/i2hwfnuygg97l7o/CV_Catalina_Mor%C3%A1n.pdf?dl=0" target="_blank">aquí</a></p>
+            <p>Puedes ver y descargar mi CV <a href="https://www.dropbox.com/s/i2hwfnuygg97l7o/CV_Catalina_Mor%C3%A1n.pdf?dl=0" target="_blank">aquí</a></p>
             
           </div>
         </section>

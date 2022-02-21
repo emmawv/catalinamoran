@@ -67,9 +67,10 @@ window.addEventListener('scroll', (() => {
 let initialIndex = 1;
 
 const scrollGallery = (direction) => {
-  const content = document.querySelector('.gallery__mob')
-  const image = document.querySelector(`.item-${initialIndex}__mob`);
+  const content = document.querySelector('.gallery')
+  const image = document.querySelector(`.item-${initialIndex}`);
   content.style.overflow = scroll;
+  
   if (direction === 'right') {
     content.scrollLeft += image.offsetWidth + 20;
   } else if (direction === 'left') {
