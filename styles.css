@@ -61,8 +61,8 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  padding: 0 40px;
-  z-index: 99999;
+  padding: 0 40px 0 20px;
+  z-index: 99999999999;
 }
 
 .transparent {
@@ -85,13 +85,20 @@ header {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 5px 30px;
   flex-wrap: wrap;
+}
+
+nav ul li:not(:last-child) {
+  margin-right: 15px;
 }
 
 ul li a {
   text-decoration: none;
   color: black;
+}
+
+.menu-icons {
+  display: none;
 }
 
 .logo img {
@@ -218,10 +225,11 @@ section {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999999999999999;
+  z-index: 9999999999999999999999;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: black;
 }
 
 .img-large img {
@@ -232,21 +240,20 @@ section {
   margin: 0 auto;
 }
 
-.blocked-body {
+.blocked-body, .blocked-menu {
   overflow: hidden;
-  position: relative;
 }
 
-.blocked-body::after {
+.blocked-menu::after {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: black;
-  opacity: 1;
-  z-index: 99999999;
+  z-index: 999999;
+  opacity: 0.6;
 }
 
 .item-1 {
@@ -276,7 +283,6 @@ section {
 
 .videos {
   display: grid;
-  gap: 30px;
   grid-template-rows: repeat(3, min-content);
   grid-template-columns: repeat(2, 1fr);
 }
@@ -284,6 +290,11 @@ section {
 .videos > div:first-child {
   grid-row: 1 / span 2;
   grid-column: 1 / span 2;
+  margin-bottom: 30px;
+}
+
+.videos > div:last-child {
+  margin-left: 30px;
 }
 
 .videos > div {
@@ -315,6 +326,59 @@ section {
 }
 
 @media screen and (max-width: 768px) {
+  .menu {
+    position: fixed;
+    right: 0;
+    top: 75px;
+    left: 0;
+    height: 0px;
+    background-color: white;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+
+  .menu-icons {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .menu-icons img {
+    width: 30px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .cross {
+    display: none
+  }
+
+  .menu nav {
+    height: 100%;
+    padding: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  ul li {
+    padding: 15px 40px;
+  }
+
+  nav ul li:not(:last-child) {
+  margin-right: 0px;
+  }
+
+  nav ul li:hover {
+    background-color: #fbf7f6;
+    opacity: 0.8;
+  }
+
   .img-hover:hover {
     transform: none;
     opacity: 1;
@@ -353,6 +417,7 @@ section {
     width: 100%;
     object-fit: cover;
     object-position: top;
+    margin-top: 75px;
   }
 
   .hero-content p {
@@ -376,9 +441,12 @@ section {
     height: 300px;
     width: 90%;
     margin: 0 auto;
-    gap: 20px;
     padding: 15px 16%;
     box-sizing: border-box;
+  }
+
+  .gallery > div:not(:last-child) {
+    margin-right: 20px;
   }
 
   .gallery > div {
@@ -413,7 +481,6 @@ section {
 
   .videos {
     display: grid;
-    gap: 20px;
     grid-template-rows: repeat(3, min-content);
     grid-template-columns: 1fr;
   }
@@ -421,7 +488,10 @@ section {
   .videos > div:first-child {
     grid-row: 1 / span 1;
     grid-column: 1 / span 1;
+    margin-bottom: 30px;
   }
 
-  
+  .videos > div:last-child {
+    margin: 30px 0 0 0 !important;
+  }
 }

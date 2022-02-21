@@ -18,15 +18,21 @@
     <section class="body-content">
       <header class="transparent">
         <div class="logo"><img src="./assets/logo.png" /></div>
-        <nav>
-          <ul>
-            <li onclick="pageScroll('about-me')">Sobre mí</li>
-            <li onclick="pageScroll('gallery')">Galería</li>
-            <li onclick="pageScroll('cv')">CV</li>
-            <li onclick="pageScroll('videos')">Vídeos</li>
-            <li onclick="pageScroll('contact')">Contacto</li>
-          </ul>
-        </nav>
+        <div class="menu-icons" onclick="toggleMenu()">
+          <img class="burger" src="assets/icons/burger.svg" alt="open menu" />
+          <img class="cross" src="assets/icons/close.svg" alt="close menu" />
+        </div>
+        <div class="menu" onclick="toggleMenu()">
+          <nav>
+            <ul>
+              <li onclick="pageScroll('about-me')">Sobre mí</li>
+              <li onclick="pageScroll('gallery')">Galería</li>
+              <li onclick="pageScroll('cv')">CV</li>
+              <li onclick="pageScroll('videos')">Vídeos</li>
+              <li onclick="pageScroll('contact')">Contacto</li>
+            </ul>
+          </nav>
+        </div>
       </header>
 
       <main>
@@ -42,8 +48,8 @@
             <p>
               Comencé mi trayectoria artística en el mundo de la danza, pero más
               tarde me trasladé a Madrid para estudiar Arte Dramático. Me gradué
-              en interpretación musical, y continué mi formación en
-              Central de Cine y en la escuela de Grumelot & Nave73.
+              en interpretación musical, y continué mi formación en Central de
+              Cine y en la escuela de Grumelot & Nave73.
             </p>
             <p>
               Además de español, hablo inglés y sé bailar ballet, contemporáneo,
@@ -54,17 +60,17 @@
 
         <section id="gallery">
           <img
-              src="./assets/icons/arrow-before.svg"
-              alt="arrow before"
-              class="slider-arrow arrow-prev"
-              onclick="scrollGallery('left')"
-            />
-            <img
-              src="./assets/icons/arrow-next.svg"
-              alt="arrow next"
-              class="slider-arrow arrow-next"
-              onclick="scrollGallery('right')"
-            />
+            src="./assets/icons/arrow-before.svg"
+            alt="arrow before"
+            class="slider-arrow arrow-prev"
+            onclick="scrollGallery('left')"
+          />
+          <img
+            src="./assets/icons/arrow-next.svg"
+            alt="arrow next"
+            class="slider-arrow arrow-next"
+            onclick="scrollGallery('right')"
+          />
 
           <div><h2 class="section-title">Galería</h2></div>
 
@@ -102,8 +108,14 @@
         <section id="cv">
           <div><h2 class="section-title">CV</h2></div>
           <div class="contact-content">
-            <p>Puedes ver y descargar mi CV <a href="https://www.dropbox.com/s/i2hwfnuygg97l7o/CV_Catalina_Mor%C3%A1n.pdf?dl=0" target="_blank">aquí</a></p>
-            
+            <p>
+              Puedes ver y descargar mi CV
+              <a
+                href="https://www.dropbox.com/s/i2hwfnuygg97l7o/CV_Catalina_Mor%C3%A1n.pdf?dl=0"
+                target="_blank"
+                >aquí</a
+              >
+            </p>
           </div>
         </section>
 
@@ -149,7 +161,11 @@
           <div><h2 class="section-title">Contacto</h2></div>
           <div class="contact-content">
             <p>Si quieres contactar conmigo puedes escribirme a:</p>
-            <p><a href="mailto:catalina.moranf@gmail.com">catalina.moranf@gmail.com</a></p>
+            <p>
+              <a href="mailto:catalina.moranf@gmail.com"
+                >catalina.moranf@gmail.com</a
+              >
+            </p>
           </div>
         </section>
       </main>
