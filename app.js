@@ -90,15 +90,19 @@ const toggleMenu = () => {
   const cross = document.querySelector(".cross");
   const body = document.getElementsByTagName("body")[0];
 
-  if (isMenuOpen) {
-    burger.style.display = 'none';
-    cross.style.display = "block"
-    menu.style.height = "300px";
-    body.classList.add("blocked-menu");
-  } else {
-    burger.style.display = "block";
-    cross.style.display = "none";
-    menu.style.height = "0px";
-    body.classList.remove("blocked-menu");
+  if (window.innerWidth <= 768) {
+
+    if (isMenuOpen) {
+      burger.style.display = 'none';
+      cross.style.display = "block"
+      menu.style.height = "300px";
+      body.classList.add("blocked-menu");
+    } else {
+      burger.style.display = "block";
+      cross.style.display = "none";
+      menu.style.height = "0px";
+      body.classList.remove("blocked-menu");
+    }
+
   }
 };

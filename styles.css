@@ -92,6 +92,10 @@ nav ul li:not(:last-child) {
   margin-right: 15px;
 }
 
+nav ul li {
+  cursor: pointer;
+}
+
 ul li a {
   text-decoration: none;
   color: black;
