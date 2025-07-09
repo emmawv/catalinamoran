@@ -1,174 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Catalina Morán</title>
-    <link rel="icon" href="assets/favicon.jpg" />
-    <link rel="stylesheet" href="styles.css" />
 
-    <script type="text/javascript" src="app.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catalina Morán</title>
+  <link rel="icon" href="assets/favicon.jpg" />
+  <link rel="stylesheet" href="styles.css" />
 
-  <body onload="bodyLoaded()">
-    <section class="body-loading">
-      <div class="loader"></div>
-    </section>
-    <section class="body-content">
-      <header class="transparent">
-        <div class="logo"><img src="./assets/logo.png" /></div>
-        <div class="menu-icons" onclick="toggleMenu()">
-          <img class="burger" src="assets/icons/burger.svg" alt="open menu" />
-          <img class="cross" src="assets/icons/close.svg" alt="close menu" />
+  <script type="text/javascript" src="app.js"></script>
+</head>
+
+<body onload="bodyLoaded()">
+  <section class="body-loading">
+    <div class="loader"></div>
+  </section>
+  <section class="body-content">
+    <header class="transparent">
+      <div class="logo"><img src="./assets/logo.png" /></div>
+      <div class="menu-icons" onclick="toggleMenu()">
+        <img class="burger" src="assets/icons/burger.svg" alt="open menu" />
+        <img class="cross" src="assets/icons/close.svg" alt="close menu" />
+      </div>
+      <div class="menu" onclick="toggleMenu()">
+        <nav>
+          <ul>
+            <li onclick="pageScroll('about-me')">Sobre mí</li>
+            <li onclick="pageScroll('gallery')">Galería</li>
+            <li onclick="pageScroll('cv')">CV</li>
+            <li onclick="pageScroll('videos')">Vídeos</li>
+            <li onclick="pageScroll('contact')">Contacto</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="hero-img__mob">
+        <img src="./assets/hero-mobile.jpg" alt="portrait" />
+      </div>
+      <section class="hero" id="about-me">
+        <div class="hero-img">
+          <img src="./assets/hero.jpg" alt="portrait" />
         </div>
-        <div class="menu" onclick="toggleMenu()">
-          <nav>
-            <ul>
-              <li onclick="pageScroll('about-me')">Sobre mí</li>
-              <li onclick="pageScroll('gallery')">Galería</li>
-              <li onclick="pageScroll('cv')">CV</li>
-              <li onclick="pageScroll('videos')">Vídeos</li>
-              <li onclick="pageScroll('contact')">Contacto</li>
-            </ul>
-          </nav>
+        <div class="hero-content">
+          <p>¡Hola! Me llamo <b>Catalina Morán</b>, y soy actriz.</p>
+          <p>
+            Comencé mi trayectoria artística en el mundo de la danza, pero más
+            tarde me trasladé a Madrid para estudiar Arte Dramático. Me gradué
+            en interpretación musical, y continué mi formación en Central de
+            Cine y en la escuela de Grumelot & Nave73.
+          </p>
+          <p>
+            Además de español, hablo inglés y sé bailar ballet, contemporáneo,
+            jazz y claqué. También canto y hago esgrima.
+          </p>
         </div>
-      </header>
+      </section>
 
-      <main>
-        <div class="hero-img__mob">
-          <img src="./assets/hero-mobile.jpg" alt="portrait" />
+      <section id="gallery">
+        <img src="./assets/icons/arrow-before.svg" alt="arrow before" class="slider-arrow arrow-prev"
+          onclick="scrollGallery('left')" />
+        <img src="./assets/icons/arrow-next.svg" alt="arrow next" class="slider-arrow arrow-next"
+          onclick="scrollGallery('right')" />
+
+        <div>
+          <h2 class="section-title">Galería</h2>
         </div>
-        <section class="hero" id="about-me">
-          <div class="hero-img">
-            <img src="./assets/hero.jpg" alt="portrait" />
-          </div>
-          <div class="hero-content">
-            <p>¡Hola! Me llamo <b>Catalina Morán</b>, y soy actriz.</p>
-            <p>
-              Comencé mi trayectoria artística en el mundo de la danza, pero más
-              tarde me trasladé a Madrid para estudiar Arte Dramático. Me gradué
-              en interpretación musical, y continué mi formación en Central de
-              Cine y en la escuela de Grumelot & Nave73.
-            </p>
-            <p>
-              Además de español, hablo inglés y sé bailar ballet, contemporáneo,
-              jazz y claqué. También canto y hago esgrima.
-            </p>
-          </div>
-        </section>
 
-        <section id="gallery">
-          <img
-            src="./assets/icons/arrow-before.svg"
-            alt="arrow before"
-            class="slider-arrow arrow-prev"
-            onclick="scrollGallery('left')"
-          />
-          <img
-            src="./assets/icons/arrow-next.svg"
-            alt="arrow next"
-            class="slider-arrow arrow-next"
-            onclick="scrollGallery('right')"
-          />
-
-          <div><h2 class="section-title">Galería</h2></div>
-
-          <div class="gallery">
-            <div class="item-1" onclick="setImageLarge('item-1')">
-              <img class="img-hover" src="./assets/gallery/gallery-1.jpg" />
-            </div>
-            <div class="item-2" onclick="setImageLarge('item-2')">
-              <img class="img-hover" src="./assets/gallery/gallery-2.jpg" />
-            </div>
-            <div class="item-3" onclick="setImageLarge('item-3')">
-              <img class="img-hover" src="./assets/gallery/gallery-3.jpg" />
-            </div>
-            <div class="item-4" onclick="setImageLarge('item-4')">
-              <img class="img-hover" src="./assets/gallery/gallery-4.jpg" />
-            </div>
-            <div class="item-5" onclick="setImageLarge('item-5')">
-              <img class="img-hover" src="./assets/gallery/gallery-5.jpg" />
-            </div>
-            <div class="item-6" onclick="setImageLarge('item-6')">
-              <img class="img-hover" src="./assets/gallery/gallery-6.jpg" />
-            </div>
-            <div class="item-7" onclick="setImageLarge('item-7')">
-              <img class="img-hover" src="./assets/gallery/gallery-7.jpg" />
-            </div>
-            <div class="item-8" onclick="setImageLarge('item-8')">
-              <img class="img-hover" src="./assets/gallery/gallery-8.jpg" />
-            </div>
-            <div class="item-9" onclick="setImageLarge('item-9')">
-              <img class="img-hover" src="./assets/gallery/gallery-9.jpg" />
-            </div>
+        <div class="gallery">
+          <div class="item-1" onclick="setImageLarge('item-1')">
+            <img class="img-hover" src="./assets/gallery/gallery-1.jpg" />
           </div>
-        </section>
+          <div class="item-2" onclick="setImageLarge('item-2')">
+            <img class="img-hover" src="./assets/gallery/gallery-2.jpg" />
+          </div>
+          <div class="item-3" onclick="setImageLarge('item-3')">
+            <img class="img-hover" src="./assets/gallery/gallery-3.jpg" />
+          </div>
+          <div class="item-4" onclick="setImageLarge('item-4')">
+            <img class="img-hover" src="./assets/gallery/gallery-4.jpg" />
+          </div>
+          <div class="item-5" onclick="setImageLarge('item-5')">
+            <img class="img-hover" src="./assets/gallery/gallery-5.jpg" />
+          </div>
+          <div class="item-6" onclick="setImageLarge('item-6')">
+            <img class="img-hover" src="./assets/gallery/gallery-6.jpg" />
+          </div>
+          <div class="item-7" onclick="setImageLarge('item-7')">
+            <img class="img-hover" src="./assets/gallery/gallery-7.jpg" />
+          </div>
+          <div class="item-8" onclick="setImageLarge('item-8')">
+            <img class="img-hover" src="./assets/gallery/gallery-8.jpg" />
+          </div>
+          <div class="item-9" onclick="setImageLarge('item-9')">
+            <img class="img-hover" src="./assets/gallery/gallery-9.jpg" />
+          </div>
+        </div>
+      </section>
 
-        <section id="cv">
-          <div><h2 class="section-title">CV</h2></div>
-          <div class="contact-content">
-            <p>
-              Puedes ver y descargar mi CV
-              <a
-                href="https://www.dropbox.com/s/i2hwfnuygg97l7o/CV_Catalina_Mor%C3%A1n.pdf?dl=0"
-                target="_blank"
-                >aquí</a
-              >
-            </p>
-          </div>
-        </section>
+      <section id="cv">
+        <div>
+          <h2 class="section-title">CV</h2>
+        </div>
+        <div class="contact-content">
+          <p>
+            Puedes ver y descargar mi CV
+            <a href="https://www.dropbox.com/s/i2hwfnuygg97l7o/CV_Catalina_Mor%C3%A1n.pdf?dl=0" target="_blank">aquí</a>
+          </p>
+        </div>
+      </section>
 
-        <section id="videos">
-          <div><h2 class="section-title">Vídeos</h2></div>
-          <div class="videos">
-            <div>
-              <div class="video-container">
-                <iframe
-                  src="https://player.vimeo.com/video/510794770?byline=0&title=0&portrait=0"
-                  frameborder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  title="Embedded vimeo"
-                ></iframe>
-              </div>
-              <h3 class="video-desc">Videobook</h3>
+      <section id="videos">
+        <div>
+          <h2 class="section-title">Vídeos</h2>
+        </div>
+        <div class="videos">
+          <div>
+            <div class="video-container">
+              <iframe title="vimeo-player" src="https://player.vimeo.com/video/1100087568?h=ae0dfb3ea3" width="640"
+                height="360" frameborder="0" allowfullscreen></iframe>
             </div>
-            <div>
-              <div class="video-container">
-                <iframe
-                  src="https://player.vimeo.com/video/678135253?byline=0&title=0&portrait=0"
-                  frameborder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  title="Embedded vimeo"
-                ></iframe>
-              </div>
-              <h4 class="video-desc">Esgrima: "Manzana"</h4>
-            </div>
-            <div>
-              <div class="video-container">
-                <iframe
-                  src="https://player.vimeo.com/video/678166028?byline=0&title=0&portrait=0"
-                  frameborder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  title="Embedded vimeo"
-                ></iframe>
-              </div>
-              <h4 class="video-desc">"City of Stars" Cover</h4>
-            </div>
+            <h3 class="video-desc">Videobook</h3>
           </div>
-        </section>
-        <section id="contact">
-          <div><h2 class="section-title">Contacto</h2></div>
-          <div class="contact-content">
-            <p>Si quieres contactar conmigo puedes escribirme a:</p>
-            <p>
-              <a href="mailto:catalina.moranf@gmail.com"
-                >catalina.moranf@gmail.com</a
-              >
-            </p>
+          <div>
+            <div class="video-container">
+              <iframe title="vimeo-player" src="https://player.vimeo.com/video/1100046397?h=be2e0026f8" width="640"
+                height="360" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <h4 class="video-desc">Toucha toucha toucha touch-me (The Rocky Horror Picture Show)</h4>
           </div>
-        </section>
-      </main>
-    </section>
-  </body>
+          <div>
+            <div class="video-container">
+              <iframe src="https://player.vimeo.com/video/678135253?byline=0&title=0&portrait=0" frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture" title="Embedded vimeo"></iframe>
+            </div>
+            <h4 class="video-desc">Esgrima: "Manzana"</h4>
+          </div>
+          <div>
+            <div class="video-container">
+              <iframe src="https://player.vimeo.com/video/678166028?byline=0&title=0&portrait=0" frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture" title="Embedded vimeo"></iframe>
+            </div>
+            <h4 class="video-desc">"City of Stars" Cover</h4>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <div>
+          <h2 class="section-title">Contacto</h2>
+        </div>
+        <div class="contact-content">
+          <p>Si quieres contactar conmigo puedes escribirme a:</p>
+          <p>
+            <a href="mailto:catalina.moranf@gmail.com">catalina.moranf@gmail.com</a>
+          </p>
+        </div>
+      </section>
+    </main>
+  </section>
+</body>
+
 </html>
